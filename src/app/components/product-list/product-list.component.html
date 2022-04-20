@@ -1,0 +1,33 @@
+<h2>Products</h2>
+<div class="product-list">
+  <div class="product" *ngFor="let product of products">
+    <h3>
+      <a [title]="product.name + 'details'" [routerLink]="['/product', product.id]">
+        {{ product.name }}</a>
+    </h3>
+
+    <p *ngIf="product.description" appApplyHighlight>
+      Description: {{ product.description }}
+    </p>
+
+    <button (click)="share()">Share</button>
+    <br />
+    <br />
+
+    <div class="cart">
+      <app-product-alerts [price]="product.price" (notify)="notified($event)"></app-product-alerts>
+      <button class="buy" (click)="addCart(product)">Add to cart</button>
+    </div>
+  </div>
+
+  <p *appUnless="condition"><strong> Test pour la directive</strong></p>
+</div>
+<h2>Directive</h2>
+
+<!-- fin div *ngFor -->
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

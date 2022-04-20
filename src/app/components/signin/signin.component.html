@@ -1,0 +1,19 @@
+<form [formGroup]="signInForm" (ngSubmit)="submit()">
+
+
+    <label for="name">Name: </label>
+    <input  type="text" id="name" formControlName="name">
+
+    <!-- <div class="password"> -->
+    <label for="email">Email: </label>
+    <input  type="text" id="email" formControlName="email">
+
+    <label for="password">Password: </label>
+    <input  type="text" id="password" formControlName="password">
+
+
+    <button type="submit">Se connecter</button>
+    <br>
+    <br>
+
+</form>

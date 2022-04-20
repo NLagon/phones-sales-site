@@ -1,0 +1,40 @@
+<div class="cart" *ngIf="products$|async">
+  <div class="product" *ngFor="let product of products$|async">
+    <p class="name">
+      {{ product.name }}
+    </p>
+    <p class="price">Price : {{ product.price }}</p>
+    <!-- <p><strong>Description : </strong> {{ product.description }}</p> -->
+  </div>
+</div>
+
+<br />
+<a [routerLink]="['/shipping']">Shipping prices</a>
+
+<br />
+<br />
+<form [formGroup]="checkoutForm" #formDir="ngForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" formControlName="name" />
+  </div>
+  <div *ngIf="formDir.submitted && name &&  name.errors?.['required']">
+    Name is required.
+  </div>
+  <div *ngIf="name && name.touched">
+    <p>Test de la propriété name.touched : Input name touché</p>
+  </div>
+  <div *ngIf="name">
+    <p>Affichage de la propriété name. valid : {{ name.valid }}</p>
+  </div>
+  <div></div>
+  <div>
+    <label for="address">Adresse</label>
+    <input type="text" formControlName="address" />
+  </div>
+  <div>
+    <label for="phoneNumber">Phone Number</label>
+    <input type="text" formControlName="phoneNumber" />
+  </div>
+  <button class="button" type="submit">Purchase</button>
+</form>

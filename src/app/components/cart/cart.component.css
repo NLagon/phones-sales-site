@@ -1,0 +1,16 @@
+/* .cart {
+    position: relative  ;
+    top: 50%;
+} */
+
+.product {
+    display: flex;
+    background-color: antiquewhite;
+    margin: 10px 0 0;
+  }
+  
+  .name,
+  .price {
+    padding: 10px;
+  }
+  

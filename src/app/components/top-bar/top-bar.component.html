@@ -1,0 +1,20 @@
+<div>
+  <ul>
+    <li class="title"><a [routerLink]="['/']">
+        <h1>My Store</h1>
+      </a></li>
+
+    <div class="as">
+      <li class="shopp"><button routerLink="/cart">Mon panier</button></li>
+      <li class="connexion"><button (click)="submit()">{{isLogged}}</button></li>
+      <li class="inscription"><button routerLink="/signup-component">S'inscrire</button></li>
+    </div>
+  </ul>
+</div>
+
+
+<!-- 
+  Copyright Google LLC. All Rights Reserved.
+  Use of this source code is governed by an MIT-style license that
+  can be found in the LICENSE file at https://angular.io/license
+  -->

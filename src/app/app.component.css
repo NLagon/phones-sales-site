@@ -1,0 +1,28 @@
+.nav {
+    /* position absolute, left et right pour pouvoir donner une hauteur */
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    height: 60px;
+    background-color: blanchedalmond;
+    /* mettre à la fin à droite le bouton */
+    /* display: flex;     
+    justify-content: flex-end;   */
+}
+
+
+.accueil {
+    position: relative;
+    height: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.mon-compte {
+    position: relative;
+    left: 85%;
+    border-radius: 10px;
+    height: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+}

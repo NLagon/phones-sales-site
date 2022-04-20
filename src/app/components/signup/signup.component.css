@@ -1,0 +1,11 @@
+form {
+    display: grid;
+    justify-content: center;
+    position: relative;
+    top: 200px;
+    padding-bottom: 10px;
+}
+
+.password {
+    margin-bottom: 20px;
+}

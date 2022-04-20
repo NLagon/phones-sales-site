@@ -1,0 +1,40 @@
+.title {
+    margin-left: 5px;
+}
+
+div {
+    width: 100%;
+    height: 68px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #1976d2;
+}
+
+li {
+    float: left;
+}
+
+/* .as {
+    width: 20%;
+    margin-left: auto;
+} */
+
+li.inscription,
+li.connexion,
+li.shopp {
+    float: right;
+}
+
+li button {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
